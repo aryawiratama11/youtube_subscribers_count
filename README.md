@@ -1,6 +1,6 @@
 ## PHP app to count subscribers on YouTube for a user
 
-YouTubeのチャンネル登録者数を表示します。。
+YouTubeのチャンネル登録者数を表示します。
 
 デザインはBootstrap3、Font Awesome Icons、Odometer、Slickを使っています。
 

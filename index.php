@@ -1,5 +1,8 @@
 <?php
 
+// Enter your API Key
+define("api_key", "********************");
+
 $channel = $_GET["ch"];
 
 // to set error flag
@@ -11,13 +14,13 @@ if($channel != ""){
 
   if(substr($channel, 0 ,2) == "UC" and $char_cnt == 24){
 
-    // search for channel ID
-    $apiurl = "https://www.googleapis.com/youtube/v3/channels?part=brandingSettings,statistics,snippet&key=AIzaSyAcTvaO8gVhNV7WTNM3FwKHWaFmZdcIGYk&id=" . $channel;
+    // search by channel ID
+    $apiurl = "https://www.googleapis.com/youtube/v3/channels?part=brandingSettings,statistics,snippet&key=" . api_key . "&id=" . $channel;
 
   }else{
 
-    // search for user name
-    $apiurl = "https://www.googleapis.com/youtube/v3/channels?part=brandingSettings,statistics,snippet&key=AIzaSyAcTvaO8gVhNV7WTNM3FwKHWaFmZdcIGYk&forUsername=" . $channel;
+    // search by user name
+    $apiurl = "https://www.googleapis.com/youtube/v3/channels?part=brandingSettings,statistics,snippet&key=" . api_key . "&forUsername=" . $channel;
 
   }
 
